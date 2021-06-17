@@ -1,0 +1,11 @@
+---
+
+
+- name: install_mc_centos
+  yum:
+   name: mc
+   state: present
+   update_cache: yes
+   when: ansible_facts['distribution'] == "CentOS"
+
+# tasks file for install_mc
